@@ -1,0 +1,194 @@
+@glilly:~/CCD$ python cdadiet.py
+(rdflib.term.BNode('N2e9903a1b10749279aca8e5e6a55189a'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/59621000'))                                                                            
+(rdflib.term.BNode('N2e9903a1b10749279aca8e5e6a55189a'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Essential Hypertension'))                      
+(rdflib.term.BNode('N2e9903a1b10749279aca8e5e6a55189a'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.BNode('N554c5c9120b0434f9cabc8818feca5fd'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/44054006'))                                                                            
+(rdflib.term.BNode('N554c5c9120b0434f9cabc8818feca5fd'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Diabetes Mellitus, Type 2'))                   
+(rdflib.term.BNode('N554c5c9120b0434f9cabc8818feca5fd'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N639886393efc49d1b0c739d12238de86')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N0a49777663334fa9bb22a174ec05a4ee')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N2e9903a1b10749279aca8e5e6a55189a')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.BNode('N639886393efc49d1b0c739d12238de86'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/55822004'))                                                                            
+(rdflib.term.BNode('N639886393efc49d1b0c739d12238de86'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Hyperlipidemia'))                              
+(rdflib.term.BNode('N639886393efc49d1b0c739d12238de86'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N554c5c9120b0434f9cabc8818feca5fd')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'2009'))                          
+(rdflib.term.BNode('N0a49777663334fa9bb22a174ec05a4ee'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/53741008'))                                                                            
+(rdflib.term.BNode('N0a49777663334fa9bb22a174ec05a4ee'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Coronary Arteriosclerosis'))                   
+(rdflib.term.BNode('N0a49777663334fa9bb22a174ec05a4ee'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+@glilly:~/CCD$ 
+@glilly:~/CCD$ python cdadiet.py
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-2-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N46e2d10fc66b4783b95a89f2a86ad341')
+)                                                                                         
+(rdflib.term.BNode('N8e3dbbdb88b54315a939cac27614c01d'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Essential Hypertension'))                      
+(rdflib.term.BNode('N8e3dbbdb88b54315a939cac27614c01d'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.BNode('N8e3dbbdb88b54315a939cac27614c01d'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/59621000'))                                                                            
+(rdflib.term.BNode('N43c6f2b61f524129b4b55d8efaba179b'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Diabetes Mellitus, Type 2'))                   
+(rdflib.term.BNode('N43c6f2b61f524129b4b55d8efaba179b'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.BNode('N43c6f2b61f524129b4b55d8efaba179b'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/44054006'))                                                                            
+(rdflib.term.BNode('N46e2d10fc66b4783b95a89f2a86ad341'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Hyperlipidemia'))                              
+(rdflib.term.BNode('N46e2d10fc66b4783b95a89f2a86ad341'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.BNode('N46e2d10fc66b4783b95a89f2a86ad341'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/55822004'))                                                                            
+(rdflib.term.BNode('N90c4292a3588454a9355503b4026385a'), rdflib.term.URIRef(u'http://purl.o
+rg/dc/terms/title'), rdflib.term.Literal(u'Coronary Arteriosclerosis'))                   
+(rdflib.term.BNode('N90c4292a3588454a9355503b4026385a'), rdflib.term.URIRef(u'http://www.w3
+.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/terms#
+CodedValue'))                                                                             
+(rdflib.term.BNode('N90c4292a3588454a9355503b4026385a'), rdflib.term.URIRef(u'http://smartp
+latforms.org/terms#code'), rdflib.term.URIRef(u'http://purl.bioontology.org/ontology/SNOMED
+CT/53741008'))                                                                            
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-4-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N8e3dbbdb88b54315a939cac27614c01d')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'2009'))                          
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-1-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N43c6f2b61f524129b4b55d8efaba179b')
+)                                                                                         
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#belongsTo'), rdflib.term.URIRef(u'http://this.ccd.com/problems'))   
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#startDate'), rdflib.term.Literal(u'200205'))                        
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://www
+.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef(u'http://smartplatforms.org/ter
+ms#Problem'))                                                                             
+(rdflib.term.URIRef(u'http://this.ccd.com/problem-3-data'), rdflib.term.URIRef(u'http://sma
+rtplatforms.org/terms#problemName'), rdflib.term.BNode('N90c4292a3588454a9355503b4026385a')
+)                                                                                         
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:sp="http://smartplatforms.org/terms#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <sp:Problem rdf:about="http://this.ccd.com/problem-2-data">
+    <sp:belongsTo rdf:resource="http://this.ccd.com/problems"/>
+    <sp:startDate>200205</sp:startDate>
+    <sp:problemName>
+      <sp:CodedValue rdf:nodeID="N46e2d10fc66b4783b95a89f2a86ad341">
+        <dcterms:title>Hyperlipidemia</dcterms:title>
+        <sp:code rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/55822004"/>
+      </sp:CodedValue>
+    </sp:problemName>
+  </sp:Problem>
+  <sp:Problem rdf:about="http://this.ccd.com/problem-4-data">
+    <sp:belongsTo rdf:resource="http://this.ccd.com/problems"/>
+    <sp:startDate>200205</sp:startDate>
+    <sp:problemName>
+      <sp:CodedValue rdf:nodeID="N8e3dbbdb88b54315a939cac27614c01d">
+        <dcterms:title>Essential Hypertension</dcterms:title>
+        <sp:code rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/59621000"/>
+      </sp:CodedValue>
+    </sp:problemName>
+  </sp:Problem>
+  <sp:Problem rdf:about="http://this.ccd.com/problem-1-data">
+    <sp:belongsTo rdf:resource="http://this.ccd.com/problems"/>
+    <sp:startDate>2009</sp:startDate>
+    <sp:problemName>
+      <sp:CodedValue rdf:nodeID="N43c6f2b61f524129b4b55d8efaba179b">
+        <dcterms:title>Diabetes Mellitus, Type 2</dcterms:title>
+        <sp:code rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/44054006"/>
+      </sp:CodedValue>
+    </sp:problemName>
+  </sp:Problem>
+  <sp:Problem rdf:about="http://this.ccd.com/problem-3-data">
+    <sp:belongsTo rdf:resource="http://this.ccd.com/problems"/>
+    <sp:startDate>200205</sp:startDate>
+    <sp:problemName>
+      <sp:CodedValue rdf:nodeID="N90c4292a3588454a9355503b4026385a">
+        <dcterms:title>Coronary Arteriosclerosis</dcterms:title>
+        <sp:code rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/53741008"/>
+      </sp:CodedValue>
+    </sp:problemName>
+  </sp:Problem>
+</rdf:RDF>
