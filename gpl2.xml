@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="cda.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
+  <realmCode code="US" />
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="2.16.840.1.113883.3.27.1776" assigningAuthorityName="CDA/R2" />
+  <templateId root="2.16.840.1.113883.10.20.1" assigningAuthorityName="CCD" />
+  <templateId root="2.16.840.1.113883.10.20.3" assigningAuthorityName="HL7/CDT Header" />
+  <templateId root="2.16.840.1.113883.3.88.11.32.1" assigningAuthorityName="HL7/CDT Header" />
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1" assigningAuthorityName="HL7/CDT Header" />
+  <id root="2.16.840.1.113883.3.72" extension="CCD_AMBv14_DS01" assigningAuthorityName="NIST Healthcare Project" />
+  <code code="34133-9" displayName="Summarization of episode note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+  <title>Patient Summary - Ambulatory</title>
+  <effectiveTime value="20100405130945-0500" />
+  <confidentialityCode>
+    <originalText>Test Data Only</originalText>
+  </confidentialityCode>
+  <languageCode code="en-US" />
+  <recordTarget>
+    <patientRole>
+      <id extension="9996799589" root="METROCLINIC" assigningAuthorityName="Metropolitan Clinic" />
+      <addr>
+        <streetAddressLine>5739 Hazel Street</streetAddressLine>
+        <city>Williamsport</city>
+        <state>PA</state>
+        <postalCode>17701</postalCode>
+      </addr>
+      <telecom value="+1-570-898-2189" />
+      <patient>
+        <name>
+          <given>James</given>
+          <given>D.</given>
+          <family>Stewart</family>
+        </name>
+        <administrativeGenderCode code="M" displayName="Male" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+        <birthTime value="19530215112005" />
+        <languageCommunication>
+          <languageCode code="en-US" />
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20100217120000" />
+    <assignedAuthor>
+      <id root="METROCLINIC" extension="DrFitzgerald" />
+      <addr>
+        <streetAddressLine>40025 Milton Street</streetAddressLine>
+        <city>Aurora</city>
+        <state>Colorado</state>
+        <postalCode>80011</postalCode>
+      </addr>
+      <telecom value="+1-570-898-2189" />
+      <assignedPerson>
+        <name>
+          <given>Thomas</given>
+          <family>Henry</family>
+          <suffix>MD</suffix>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <name>Milton Street Laboratories</name>
+        <telecom value="tel:312-555-5555"/>
+        <addr>
+           <streetAddressLine>40025 Milton Street</streetAddressLine>
+           <city>Aurora</city>
+           <state>Colorado</state>
+           <postalCode>80011</postalCode>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="2.16.840.1.113883.3.72" />
+        <name>NIST Healthcare Project</name>
+        <telecom value="tel:+1-301-975-3260" />
+        <addr>
+          <streetAddressLine>100 Bureau Dr</streetAddressLine>
+          <city>Gaithersburg</city>
+          <state>MD</state>
+          <postalCode>20899</postalCode>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <effectiveTime>
+        <low value="19600704" />
+        <high value="20100325" />
+      </effectiveTime>
+    </serviceEvent>
+  </documentationOf>
+  <component>
+    <structuredBody>
+      <component>
+        <!--Problems-->
+        <section>
+          <templateId root="2.16.840.1.113883.3.88.11.83.103" assigningAuthorityName="HITSP/C83" />
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" assigningAuthorityName="IHE PCC" />
+          <templateId root="2.16.840.1.113883.10.20.1.11" assigningAuthorityName="HL7 CCD" />
+          <!--Problems section template-->
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list" />
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27" />
+              <!-- Problem act template -->
+              <id root="6a2fa88d-4174-4909-aece-db44b60a3abb" />
+              <code nullFlavor="NA" />
+              <performer typeCode="PRF">
+                <assignedEntity>
+                  <id extension="PseudoMD-2" root="2.16.840.1.113883.3.72.5.2" />
+                  <addr />
+                  <telecom />
+                </assignedEntity>
+              </performer>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                  <!--Problem observation template - NOT episode template-->
+                  <id root="d11275e7-67ae-11db-bd13-0800200c9a66" />
+                  <code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" />
+                  <text>
+                    <reference value="#CondID-1" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="2009" />
+                  </effectiveTime>
+                  <value xsi:type="CD" displayName="Diabetes Mellitus, Type 2" code="44054006" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96" />
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50" />
+                      <!-- Problem status observation template -->
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" />
+                      <statusCode code="completed" />
+                      <value xsi:type="CE" code="55561003" codeSystem="2.16.840.1.113883.6.96" displayName="Active" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+              <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+              <!-- Problem act template -->
+              <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" />
+              <code nullFlavor="NA" />
+              <statusCode code="active" />
+              <effectiveTime>
+                <low nullFlavor="UNK" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                  <!--Problem observation template -->
+                  <id root="ab1791b0-5c71-11db-b0de-0800200c9a66" />
+                  <code displayName="Condition" code="64572001" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96" />
+                  <text>
+                    <reference value="#CondID-2" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="200205" />
+                    <high nullFlavor="UNK" />
+                  </effectiveTime>
+                  <value xsi:type="CD" displayName="Hyperlipidemia" code="55822004" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96" />
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50" />
+                      <!-- Problem status observation template -->
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" />
+                      <statusCode code="completed" />
+                      <value xsi:type="CE" code="55561003" codeSystem="2.16.840.1.113883.6.96" displayName="Active" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+              <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+              <!-- Problem act template -->
+              <id root="d11275e9-67ae-11db-bd13-0800200c9a66" />
+              <code nullFlavor="NA" />
+              <statusCode code="active" />
+              <effectiveTime>
+                <low nullFlavor="UNK" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                  <!-- Problem observation template -->
+                  <id root="9d3d416d-45ab-4da1-912f-4583e0632000" />
+                  <code displayName="Condition" code="64572001" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96" />
+                  <text>
+                    <reference value="#CondID-3" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="200205" />
+                    <high nullFlavor="UNK" />
+                  </effectiveTime>
+                  <value xsi:type="CD" displayName="Coronary Arteriosclerosis" code="53741008" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96" />
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50" />
+                      <!-- Problem status observation template -->
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" />
+                      <statusCode code="completed" />
+                      <value xsi:type="CE" code="90734009" codeSystem="2.16.840.1.113883.6.96" displayName="Chronic" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.41" assigningAuthorityName="CCD" />
+                  <!-- Episode observation template -->
+                  <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <statusCode code="completed" />
+                  <value xsi:type="CD" displayName="Clinical finding" code="404684003" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96">
+                    <qualifier>
+                      <name code="246456000" displayName="Episodicity" />
+                      <value code="288527008" displayName="New episode" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96" />
+                    </qualifier>
+                  </value>
+                  <entryRelationship typeCode="SAS">
+                    <act classCode="ACT" moodCode="EVN">
+                      <id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" />
+                      <code nullFlavor="NA" />
+                    </act>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.3.88.11.83.7" assigningAuthorityName="HITSP C83" />
+              <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="IHE PCC" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" assigningAuthorityName="IHE PCC" />
+              <!-- Problem act template -->
+              <id root="5a2c903c-bd77-4bd1-ad9d-452383fbfefa" />
+              <code nullFlavor="NA" />
+              <statusCode code="active" />
+              <effectiveTime>
+                <low nullFlavor="UNK" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28" assigningAuthorityName="HL7 CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" assigningAuthorityName="IHE PCC" />
+                  <!-- Problem observation template -->
+                  <id />
+                  <code displayName="Condition" code="64572001" codeSystemName="SNOMED-CT" codeSystem="2.16.840.1.113883.6.96" />
+                  <text>
+                    <reference value="#CondID-4" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="200205" />
+                    <high nullFlavor="UNK" />
+                  </effectiveTime>
+                  <value xsi:type="CD" displayName="Essential Hypertension" code="59621000" codeSystemName="SNOMED" codeSystem="2.16.840.1.113883.6.96" />
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50" />
+                      <!-- Problem status observation template -->
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" displayName="Status" />
+                      <statusCode code="completed" />
+                      <value xsi:type="CE" code="55561003" codeSystem="2.16.840.1.113883.6.96" displayName="Active" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--Medications-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.8" assigningAuthorityName="HL7 CCD" />
+          <!--Medications section template-->
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use" />
+            <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+              <templateId root="2.16.840.1.113883.3.88.11.83.8" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+              <!--Medication activity template -->
+              <id />
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20090916" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period value="24" unit="h" />
+              </effectiveTime>
+              <routeCode code="C38288" displayName="Oral" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1"></routeCode>
+              <doseQuantity value="1" unit="tablet" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" />
+                  <templateId root="2.16.840.1.113883.3.88.11.83.8.2" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+                  <!-- Product template -->
+                  <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                    <code code="205875" displayName="glyburide 2.5 mg Oral Tablet (Diabeta)" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                      <originalText>
+                        <reference value="Diabeta" />
+                      </originalText>
+                    </code>
+                    <name>Diabeta</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <act classCode="ACT" moodCode="INT">
+                  <code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode">
+                    <originalText>
+                      <reference value="#PInstruct_01" />
+                    </originalText>
+                  </code>
+                </act>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+              <!--Medication activity template -->
+              <id />
+              <statusCode code="completed" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20020505" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period value="24" unit="h" />
+              </effectiveTime>
+              <routeCode code="PO" displayName="Swallow, oral" codeSystemName="HL7 RouteOfAdministration" codeSystem="2.16.840.1.113883.5.112">
+                <originalText>By Mouth</originalText>
+                <translation code="C38288" displayName="Oral" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1" />
+              </routeCode>
+              <doseQuantity value="1" unit="tablet" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" />
+                  <!-- Product template -->
+                  <manufacturedMaterial>
+                    <code code="617314" displayName="atorvastatin calcium 10 mg Oral Tablet (Lipitor)" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                      <originalText>atorvastatin calcium</originalText>
+                    </code>
+                    <name>Lipitor</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <act classCode="ACT" moodCode="INT">
+                  <code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode">
+                    <originalText>
+                      <reference value="#PInstruct_02" />
+                    </originalText>
+                  </code>
+                </act>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+              <!--Medication activity template -->
+              <id />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20020505" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period value="12" unit="h" />
+              </effectiveTime>
+              <routeCode code="PO" displayName="Swallow, oral" codeSystemName="HL7 RouteOfAdministration" codeSystem="2.16.840.1.113883.5.112">
+                <originalText>By Mouth</originalText>
+                <translation code="C38288" displayName="Oral" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1" />
+              </routeCode>
+              <doseQuantity value="1" unit="tablet" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" />
+                  <!-- Product template -->
+                  <manufacturedMaterial>
+                    <code code="200801" displayName="Furosemide 20 MG Oral Tablet [Lasix]" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                      <originalText>furosemide</originalText>
+                    </code>
+                    <name>Lasix</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <act classCode="ACT" moodCode="INT">
+                  <code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode">
+                    <originalText>
+                      <reference value="#PInstruct_03" />
+                    </originalText>
+                  </code>
+                </act>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="CCD" />
+              <!--Medication activity template -->
+              <id />
+              <statusCode code="active" />
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20020505" />
+              </effectiveTime>
+              <effectiveTime xsi:type="PIVL_TS" operator="A">
+                <period value="12" unit="h" />
+              </effectiveTime>
+              <routeCode code="PO" displayName="Swallow, oral" codeSystemName="HL7 RouteOfAdministration" codeSystem="2.16.840.1.113883.5.112">
+                <originalText>By Mouth</originalText>
+                <translation code="C38288" displayName="Oral" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1" />
+              </routeCode>
+              <doseQuantity value="1" unit="tablet" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" />
+                  <!-- Product template -->
+                  <manufacturedMaterial>
+                    <code code="628958" displayName="potassium chloride 10 mEq Oral Tablet (Klor-Con)" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                      <originalText>potassium chloride</originalText>
+                    </code>
+                    <name>Klor-Con</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <act classCode="ACT" moodCode="INT">
+                  <code code="PINSTRUCT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode">
+                    <originalText>
+                      <reference value="#PInstruct_04" />
+                    </originalText>
+                  </code>
+                </act>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--Allergies-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.2" assigningAuthorityName="HL7 CCD" />
+          <!--Allergies/Reactions section template-->
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies" />
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27" assigningAuthorityName="CCD" />
+              <templateId root="2.16.840.1.113883.3.88.11.83.6" assigningAuthorityName="CCD" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" assigningAuthorityName="CCD" />
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" assigningAuthorityName="CCD" />
+              <!-- Problem act template -->
+              <id root="2C748172-7CC2-4902-8AF0-23A105C4401B" />
+              <code nullFlavor="NA" />
+              <statusCode code="completed" />
+              <effectiveTime>
+                <low value="19950325" />
+                <high value="19960627" />
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.18" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+                  <templateId root="2.16.840.1.113883.10.20.1.28" />
+                  <!-- Alert observation template -->
+                  <id />
+                  <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="drug allergy" codeSystemName="SNOMED CT" />
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="19960627" />
+                    <high value="19960627" />
+                  </effectiveTime>
+                  <!--Note that IHE/PCC and HITSP/C32 differ in how to represent the drug, substance, or food that one is allergic to. IHE/PCC expects to see that information in <value> and HITSP/C32 expects to see it in
+										<participant>. The following puts the SNOMED allergy code in <value> and the RxNorm drug code in <participant>. -->
+                  <value xsi:type="CD" code="416098002" displayName="Indomethacin allergy" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                  <entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.54" assigningAuthorityName="CCD" />
+                      <id />
+                      <code />
+                      <statusCode code="completed" />
+                      <value xsi:type="CD">
+                        <originalText>Hives<reference value="#ReactionID-1" /></originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.50" />
+                      <!--Problem status observation template -->
+                      <code displayName="Status" code="33999-4" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                      <statusCode code="completed" />
+                      <value xsi:type="CE" displayName="Active" code="55561003" codeSystemName="SNOMED CT" codeSystem="2.16.840.1.113883.6.96" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--Immunizations-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.6" assigningAuthorityName="HL7 CCD" />
+          <!--Immunizations section template-->
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations" />
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="HL7 CCD" />
+              <!-- Medication activity template -->
+              <id />
+              <statusCode code="completed" />
+              <effectiveTime value="20100325" />
+              <routeCode code="IM" displayName="Intramuscular" codeSystemName="HL7 RouteOfAdministration" codeSystem="2.16.840.1.113883.5.112">
+                <originalText>Intramuscular</originalText>
+                <translation code="C28161" displayName="Intramuscular" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1" />
+              </routeCode>
+              <doseQuantity value="1" unit="shot" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="CCD" />
+                  <!-- Product template -->
+                  <manufacturedMaterial>
+                    <code code="52" displayName="Hepatitis A, Adult" codeSystemName="CVX" codeSystem="2.16.840.1.113883.6.59">
+                      <originalText>Hepatitis A, Adult</originalText>
+                      <translation code="798367" displayName="Hepatitis A, Adult" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                    </code>
+                    <lotNumberText>HA165V1</lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>GLAXOSMITHKLINE</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="MFST">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code />
+                  <value xsi:type="CD">
+                    <originalText>None</originalText>
+                  </value>
+                </observation>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.24" assigningAuthorityName="HL7 CCD" />
+              <!-- Medication activity template -->
+              <id />
+              <statusCode code="completed" />
+              <effectiveTime value="20091025" />
+              <routeCode code="IM" displayName="Intramuscular" codeSystemName="HL7 RouteOfAdministration" codeSystem="2.16.840.1.113883.5.112">
+                <originalText>Intramuscular</originalText>
+                <translation code="C28161" displayName="Intramuscular" codeSystemName="FDA RouteOfAdministration" codeSystem="2.16.840.1.113883.3.26.1.1" />
+              </routeCode>
+              <doseQuantity value="1" unit="shot" />
+              <consumable>
+                <manufacturedProduct>
+                  <templateId root="2.16.840.1.113883.10.20.1.53" assigningAuthorityName="CCD" />
+                  <!-- Product template -->
+                  <manufacturedMaterial>
+                    <code code="33" displayName="pneumococcal" codeSystemName="CVX" codeSystem="2.16.840.1.113883.6.59">
+                      <originalText>Pneumococcal Polysaccharide Vaccine</originalText>
+                      <translation code="854977" displayName="pneumococcal vaccine polyvalent" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                        <originalText>PNEUMOVAX 23</originalText>
+                      </translation>
+                    </code>
+                    <lotNumberText>887765B</lotNumberText>
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <name>Merck</name>
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="MFST">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code />
+                  <value xsi:type="CD">
+                    <originalText>None</originalText>
+                  </value>
+                </observation>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--Procedures-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.12" assigningAuthorityName="HL7 CCD" />
+          <!--Surgeries section template-->
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="List of surgeries" />
+          <entry typeCode="DRIV">
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="HL7 CCD" />
+              <!-- Procedure activity template -->
+              <id />
+              <code code="11401" displayName="Excision of benign lesion on arm" codeSystem="2.16.840.1.113883.6.82" codeSystemName="CPT-5">
+                <originalText>
+                  <reference value="#ProcID-1" />
+                </originalText>
+                <translation code="86.3" displayName="Excision of benign lesion on arm" codeSystem="2.16.840.1.113883.6.42" codeSystemName="ICD-9" />
+              </code>
+              <statusCode code="completed"></statusCode>
+              <effectiveTime value="20060726"></effectiveTime>
+              <targetSiteCode>
+                <originalText>Left Arm</originalText>
+              </targetSiteCode>
+              <participant typeCode="LOC">
+                <templateId root="2.16.840.1.113883.10.20.1.45" assigningAuthorityName="CCD" />
+                <participantRole classCode="SDLOC">
+                  <addr>
+                    <streetAddressLine>5544 Sutter Street</streetAddressLine>
+                    <city>Williamsport</city>
+                    <state>PA</state>
+                    <postalCode>17701</postalCode>
+                  </addr>
+                  <playingEntity classCode="PLC">
+                    <name>Metropolitan Clinic</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <!--A CCR "Type" observation has no equivalent explicit representation in CCD, so we follow the CCD specification for a general "Status" observation and represent "Type" as follows.-->
+              <entryRelationship typeCode="REFR">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code>
+                    <originalText>Type</originalText>
+                  </code>
+                  <value xsi:type="CD">
+                    <originalText>Surgical</originalText>
+                  </value>
+                </observation>
+              </entryRelationship>
+            </procedure>
+          </entry>
+          <entry typeCode="DRIV">
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="HL7 CCD" />
+              <!-- Procedure activity template -->
+              <id />
+              <code code="44950" displayName="Emergency Appendectomy" codeSystem="2.16.840.1.113883.6.82" codeSystemName="CPT-5">
+                <originalText>
+                  <reference value="#ProcID-2" />
+                </originalText>
+                <translation code="47.09" displayName="Emergency Appendectomy" codeSystem="2.16.840.1.113883.6.42" codeSystemName="ICD-9" />
+              </code>
+              <statusCode code="completed" />
+              <effectiveTime value="20030515" />
+              <targetSiteCode>
+                <originalText>Appendix</originalText>
+              </targetSiteCode>
+              <participant typeCode="LOC">
+                <templateId root="2.16.840.1.113883.10.20.1.45" assigningAuthorityName="CCD" />
+                <participantRole classCode="SDLOC">
+                  <playingEntity classCode="PLC">
+                    <name>Metropolitan Clinic</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <!--A CCR "Type" observation has no equivalent explicit representation in CCD, so
+									we follow the CCD specification for a general "Status" observation and represent "Type" as follows.-->
+              <entryRelationship typeCode="REFR">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code>
+                    <originalText>Type</originalText>
+                  </code>
+                  <value xsi:type="CD">
+                    <originalText>Surgical</originalText>
+                  </value>
+                </observation>
+              </entryRelationship>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <!--Test Results-->
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.14" assigningAuthorityName="HL7 CCD" />
+          <!--Diagnostic Results section template-->
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Results" />
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.32" />
+              <!--Result organizer template -->
+              <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" />
+              <code code="43789009" codeSystem="2.16.840.1.113883.6.96" displayName="CBC WO DIFFERENTIAL" />
+              <statusCode code="completed" />
+              <effectiveTime value="200003231430" />
+              <component>
+                <procedure classCode="PROC" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.3.88.11.83.17" assigningAuthorityName="HITSP C83" />
+                  <templateId root="2.16.840.1.113883.10.20.1.29" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" assigningAuthorityName="IHE PCC" />
+                  <id />
+                  <code code="43789009" codeSystem="2.16.840.1.113883.6.96" displayName="CBC WO DIFFERENTIAL">
+                    <originalText>Extract blood for CBC test<reference value="Ptr to text  in parent Section" /></originalText>
+                  </code>
+                  <text>Extract blood for CBC test. Note that IHE rules require description and
+                        reference to go here rather than in originalText of code.<reference value="Ptr to text  in parent Section" /></text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="200003231430" />
+                  <performer>
+                    <assignedEntity>
+                      <id extension="PseudoMD-1" root="2.16.840.1.113883.3.72.5.2" />
+                      <addr>See documentationOf in Header</addr>
+                      <telecom />
+                    </assignedEntity>
+                  </performer>
+                </procedure>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.3.88.11.83.15.1" assigningAuthorityName="HITSP C83" />
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                  <!-- Result observation template -->
+                  <id root="107c2dc0-67a5-11db-bd13-0800200c9a66" />
+                  <code code="30313-1" codeSystem="2.16.840.1.113883.6.1" displayName="HGB" />
+                  <text>
+                    <reference value="PtrToValueInsectionText" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="200003231430" />
+                  <value xsi:type="PQ" value="13.2" unit="g/dl" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                  <referenceRange>
+                    <observationRange>
+                      <text>M 13-18 g/dl; F 12-16 g/dl</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.3.88.11.83.15.1" assigningAuthorityName="HITSP C83" />
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                  <!-- Result observation template -->
+                  <id root="8b3fa370-67a5-11db-bd13-0800200c9a66" />
+                  <code code="33765-9" codeSystem="2.16.840.1.113883.6.1" displayName="WBC" />
+                  <text>
+                    <reference value="PtrToValueInsectionText" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="200003231430" />
+                  <value xsi:type="PQ" value="6.7" unit="10+3/ul" />
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="4.3" unit="10+3/ul" />
+                        <high value="10.8" unit="10+3/ul" />
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="CCD" />
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" assigningAuthorityName="IHE PCC" />
+                  <!-- Result observation template -->
+                  <id root="80a6c740-67a5-11db-bd13-0800200c9a66" />
+                  <code code="26515-7" codeSystem="2.16.840.1.113883.6.1" displayName="PLT" />
+                  <text>
+                    <reference value="PtrToValueInsectionText" />
+                  </text>
+                  <statusCode code="completed" />
+                  <effectiveTime value="200003231430" />
+                  <value xsi:type="PQ" value="123" unit="10+3/ul" />
+                  <interpretationCode code="L" codeSystem="2.16.840.1.113883.5.83" />
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="150" unit="10+3/ul" />
+                        <high value="350" unit="10+3/ul" />
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+              <component>
+                <act classCode="ACT" moodCode="EVN">
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.4" assigningAuthorityName="IHE PCC" />
+                  <id />
+                  <code nullFlavor="NA" />
+                  <text>
+                    <reference value="PointerToTextinSection" />
+                  </text>
+                  <reference typeCode="REFR">
+                    <externalDocument classCode="DOC" moodCode="EVN">
+                      <id root="REGISTRYOID" extension="SOMEID" assigningAuthorityName="NIST Registry" />
+                      <text>http://nist.etc</text>
+                    </externalDocument>
+                  </reference>
+                </act>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.32" />
+              <!--Result organizer template -->
+              <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" />
+              <code>
+                <originalText>Lab Results</originalText>
+              </code>
+              <statusCode code="completed" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="HL7 CCD" />
+                  <!-- Result observation template -->
+                  <id />
+                  <code code="14771-0" displayName="Fasting Blood Glucose" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20090916" />
+                  <value xsi:type="PQ" value="178" unit="mg/dl" />
+                  <interpretationCode code="N" displayName="normal" codeSystemName="HL7 InterpretationRange" codeSystem="2.16.840.1.113883.5.83" />
+                  <!--A CCR "Type" observation has no equivalent explicit representation in CCD, so we follow the CCD specification for a general "Status" observation and represent "Type" as follows; type could also be derivable from the above CPT or ICD-9 <code> or identified in a parent <organizer> element.-->
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code>
+                        <originalText>Type</originalText>
+                      </code>
+                      <value xsi:type="CD">
+                        <originalText>Chemistry</originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="70" unit="mg/dl" inclusive="true" />
+                        <high value="100" unit="mg/dl" inclusive="true" />
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.32" />
+              <!--Result organizer template -->
+              <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" />
+              <code>
+                <originalText>Lab Results</originalText>
+              </code>
+              <statusCode code="completed" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="HL7 CCD" />
+                  <!-- Result observation template -->
+                  <id />
+                  <code code="14682-9" displayName="Creatinine" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20090916" />
+                  <value xsi:type="PQ" value="1.0" unit="mg/dl" />
+                  <interpretationCode code="N" displayName="normal" codeSystemName="HL7 InterpretationRange" codeSystem="2.16.840.1.113883.5.83" />
+                  <!--A CCR "Type" observation has no equivalent explicit representation in CCD, so we follow the CCD specification for a general "Status" observation and represent "Type" as follows; type could also be derivable from the above CPT or ICD-9 <code> or identified in a parent <organizer> element.-->
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code>
+                        <originalText>Type</originalText>
+                      </code>
+                      <value xsi:type="CD">
+                        <originalText>Chemistry</originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="0.5" unit="mg/dl" inclusive="true" />
+                        <high value="1.4" unit="mg/dl" inclusive="true" />
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.32" />
+              <!--Result organizer template -->
+              <id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" />
+              <code>
+                <originalText>Lab Results</originalText>
+              </code>
+              <statusCode code="completed" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31" assigningAuthorityName="HL7 CCD" />
+                  <!-- Result observation template -->
+                  <id />
+                  <code code="14937-7" displayName="BUN" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+                  <statusCode code="completed" />
+                  <effectiveTime value="20090916" />
+                  <value xsi:type="PQ" value="18.0" unit="mg/dl" />
+                  <interpretationCode code="N" displayName="normal" codeSystemName="HL7 InterpretationRange" codeSystem="2.16.840.1.113883.5.83" />
+                  <!--A CCR "Type" observation has no equivalent explicit representation in CCD, so we follow the CCD specification for a general "Status" observation and represent "Type" as follows; type could also be derivable from the above CPT or ICD-9 <code> or identified in a parent <organizer> element.-->
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code>
+                        <originalText>Type</originalText>
+                      </code>
+                      <value xsi:type="CD">
+                        <originalText>Chemistry</originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                  <referenceRange>
+                    <observationRange>
+                      <value xsi:type="IVL_PQ">
+                        <low value="7.0" unit="mg/dl" inclusive="true" />
+                        <high value="30.0" unit="mg/dl" inclusive="true" />
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
