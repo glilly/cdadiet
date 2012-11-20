@@ -192,3 +192,37 @@ rtplatforms.org/terms#problemName'), rdflib.term.BNode('N90c4292a3588454a9355503
     </sp:problemName>
   </sp:Problem>
 </rdf:RDF>
+
+@prefix ccd: <http://this.ccd.com/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sp: <http://smartplatforms.org/terms#> .
+
+ccd:problem-1-data a sp:Problem;
+    sp:belongsTo ccd:problems;
+    sp:problemName [ a sp:CodedValue;
+            dcterms:title "Diabetes Mellitus, Type 2";
+            sp:code <http://purl.bioontology.org/ontology/SNOMEDCT/44054006> ];
+    sp:startDate "2009" .
+
+ccd:problem-2-data a sp:Problem;
+    sp:belongsTo ccd:problems;
+    sp:problemName [ a sp:CodedValue;
+            dcterms:title "Hyperlipidemia";
+            sp:code <http://purl.bioontology.org/ontology/SNOMEDCT/55822004> ];
+    sp:startDate "200205" .
+
+ccd:problem-3-data a sp:Problem;
+    sp:belongsTo ccd:problems;
+    sp:problemName [ a sp:CodedValue;
+            dcterms:title "Coronary Arteriosclerosis";
+            sp:code <http://purl.bioontology.org/ontology/SNOMEDCT/53741008> ];
+    sp:startDate "200205" .
+
+ccd:problem-4-data a sp:Problem;
+    sp:belongsTo ccd:problems;
+    sp:problemName [ a sp:CodedValue;
+            dcterms:title "Essential Hypertension";
+            sp:code <http://purl.bioontology.org/ontology/SNOMEDCT/59621000> ];
+    sp:startDate "200205" .
+
+
