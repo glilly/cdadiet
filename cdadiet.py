@@ -21,11 +21,11 @@ import xml.etree.ElementTree as ET
 from rdflib import Literal, BNode, Namespace
 from rdflib import RDF
 import rdflib
-from rdflib.URIRef import URIRef
-from rdflib.constants import TYPE, VALUE
+#from rdflib.URIRef import URIRef
+#from rdflib.constants import TYPE, VALUE
 
 # Import RDFLib's default TripleStore implementation
-from rdflib.TripleStore import TripleStore
+#from rdflib.TripleStore import TripleStore
 
 #store = TripleStore(  )
 g = rdflib.Graph()
@@ -102,10 +102,12 @@ if __name__ == '__main__':
     gr=problems.smart_problems(toc)
 #    x=yield_smart['problems']
 #    gr=x(toc)
-#    for s,p,o in gr:
-#        print ((s,p,o))
-    out=gr.serialize(format='rdf')
+    for s,p,o in gr:
+        print ((s,p,o))
+    out=gr.serialize(format='pretty-xml')
     print out;
+    outn3=gr.serialize(format='n3')
+    print outn3;
 #    outjson=gr.serialize(format='json') 
 # oops did not have a serializer for json is there one?? how do i install it? gpl
 #    print outjson;

@@ -21,11 +21,11 @@ import xml.etree.ElementTree as ET
 from rdflib import Literal, BNode, Namespace
 from rdflib import RDF
 import rdflib
-from rdflib.URIRef import URIRef
-from rdflib.constants import TYPE, VALUE
+#from rdflib.URIRef import URIRef
+#from rdflib.constants import TYPE, VALUE
 
 # Import RDFLib's default TripleStore implementation
-from rdflib.TripleStore import TripleStore
+#from rdflib.TripleStore import TripleStore
 
 
 def rdfinit(g):
