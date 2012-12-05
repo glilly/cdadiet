@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import problems
+import medications
 import cdautil
 import xml.etree.ElementTree as ET
 from rdflib import Literal, BNode, Namespace
@@ -83,6 +84,7 @@ def init():
     root = dom.getroot()
     toc = cdautil.sections(root)
     problems.derive_problems(toc)
+    medications.derive_medications(toc)
 #    x=yield_smart('problems')
 #    s=x()
     return (dom, root, toc)
@@ -97,17 +99,21 @@ if __name__ == '__main__':
 #    print ;
 #    show(toc,'problem-1')
     problems.derive_problems(toc)
+    medications.derive_medications(toc)
 #    listtoc(toc)
 #    g.prefix_mapping("ccd","https:this.ccd.com/patient888999/records/")
     gr=problems.smart_problems(toc)
 #    x=yield_smart['problems']
 #    gr=x(toc)
-    for s,p,o in gr:
-        print ((s,p,o))
+#    for s,p,o in gr:
+#        print ((s,p,o))
+    outnt=gr.serialize(format='nt')
+    print outnt;
     out=gr.serialize(format='pretty-xml')
     print out;
     outn3=gr.serialize(format='n3')
     print outn3;
+    listtoc(toc);
 #    outjson=gr.serialize(format='json') 
 # oops did not have a serializer for json is there one?? how do i install it? gpl
 #    print outjson;
