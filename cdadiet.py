@@ -40,9 +40,9 @@ g.bind("ccd","http://this.ccd.com/")
 def tree(node, prefix='|--'):
     txt=('' if (node.text is None) or (len(node.text) == 0) else node.text);
     txt2 = txt.replace('\n','');
-    print prefix+clean(node.tag)+'  '+txt2;
+    print prefix+cdautil.clean(node.tag)+'  '+txt2;
     for att in node.attrib:
-        print prefix+'  : '+clean2(att)+'^'+node.attrib[att];
+        print prefix+'  : '+cdautil.clean2(att)+'^'+node.attrib[att];
     for child in node:
         tree(child,'|  '+prefix );
 
@@ -107,13 +107,17 @@ if __name__ == '__main__':
 #    gr=x(toc)
 #    for s,p,o in gr:
 #        print ((s,p,o))
-    outnt=gr.serialize(format='nt')
-    print outnt;
+#    outnt=gr.serialize(format='nt')
+#    print outnt;
     out=gr.serialize(format='pretty-xml')
-    print out;
+#    print out;
     outn3=gr.serialize(format='n3')
-    print outn3;
+#    print outn3;
     listtoc(toc);
+#    gg=rdflib.Graph()
+#    gg.parse('gpl2.xml')
+#    outgg=gg.serialize(format='turtle')
+#    print outgg
 #    outjson=gr.serialize(format='json') 
 # oops did not have a serializer for json is there one?? how do i install it? gpl
 #    print outjson;

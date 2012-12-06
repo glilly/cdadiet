@@ -44,6 +44,38 @@ def medication(toc,medname):
     data['code']=g.attrib['code']
     data['codeSystemName']=g.attrib['codeSystemName']
     data['displayName']=g.attrib['displayName']
+    g2=med.find(".//{urn:hl7-org:v3}consumable/{urn:hl7-org:v3}manufacturedProduct/{urn:hl7-org:v3}manufacturedMaterial/{urn:hl7-org:v3}name")
+    data['name']=g2.text
+    route={}
+    r=med.find(".//{urn:hl7-org:v3}routeCode")
+    route['code']=r.attrib['code']
+    route['codeSystemName']=r.attrib['codeSystemName']
+    route['displayName']=r.attrib['displayName']
+    route['codeSystem']=r.attrib['codeSystem']
+    r2=med.find(".//{urn:hl7-org:v3}routeCode/{urn:hl7-org:v3}originalText")
+    if (r2 is not None):
+        route['originalText']=r2.text
+    r3=med.find(".//{urn:hl7-org:v3}routeCode/{urn:hl7-org:v3}translation")
+    if (r3 is not None):
+        rtcde={}
+        rtcde['code']=r3.attrib['code']
+        rtcde['codeSystem']=r3.attrib['codeSystem']
+        rtcde['displayName']=r3.attrib['displayName']
+        rtcde['codeSystemName']=r3.attrib['codeSystemName']
+        route['translation']=rtcde
+    data['route']=route
+    d1=med.find(".//{urn:hl7-org:v3}doseQuantity")
+    dose={}
+    dose['value']=d1.attrib['value']
+    dose['unit']=d1.attrib['unit']
+    data['dose']=dose
+    t1=med.find(".//{urn:hl7-org:v3}effectiveTime/{urn:hl7-org:v3}low")
+    data['effectiveTime']=t1.attrib['value']
+    period={}
+    t2=med.find(".//{urn:hl7-org:v3}effectiveTime/{urn:hl7-org:v3}period")
+    period['value']=t2.attrib['value']
+    period['unit']=t2.attrib['unit']
+    data['period']=period
     return data
 #    g2=p.find(".//{urn:hl7-org:v3}act/{urn:hl7-org:v3}entryRelationship/{urn:hl7-org:v3}observation/{urn:hl7-org:v3}effectiveTime/{urn:hl7-org:v3}low")
 #    data['effectiveTime']=g2.attrib['value']
