@@ -92,6 +92,7 @@ def smart_medications(toc):
     sp=Namespace("http://smartplatforms.org/terms#")
     smart=Namespace("http://sandbox-api.smartplatforms.org/records/")
     snomed=Namespace("http://purl.bioontology.org/ontology/SNOMEDCT/")
+    rxnorm=Namespace("http://purl.bioontology.org/ontology/RXNORM/")
     ccd=Namespace("http://this.ccd.com/")
     j=toc['medication-count']
     for i in range(1,j+1):
@@ -101,11 +102,35 @@ def smart_medications(toc):
         g.add((sub,RDF.type,sp['Medication']))
         bto=ccd['medications']
         g.add((sub,sp['belongsTo'],bto))
-        g.add((sub,sp['startDate'],Literal(p['effectiveTime'])))
+        g.add((sub,sp['startDate'],Literal(med['effectiveTime'])))
         medname=BNode()
         g.add((sub,sp['medicationName'],medname))
         g.add((medname,RDF.type,sp['CodedValue']))
-        g.add((medname,dcterms['title'],Literal(p['displayName'])))
-        g.add((medname,sp['code'],snomed[p['code']]))
+        g.add((medname,dcterms['title'],Literal(med['displayName'])))
+        g.add((medname,sp['code'],rxnorm[med['code']]))
+        route=med['route']
+        binstr=BNode()
+        broute=BNode()
+        g.add((medname,sp['instructions'],binstr))
+        g.add((binstr,sp['route'],broute))
+        g.add((broute,RDF.type,sp['CodedValue']))
+        g.add((broute,sp['codeSystemName'],Literal(route['codeSystemName'])))
+        g.add((broute,sp['code'],Literal(route['code'])))
+        g.add((broute,dcterms['title'],Literal(route['displayName'])))
+#        g.add((broute,sp['originalText'],Literal(route['originalText'])))
+#        try rtrans=route['translation']
+#        brtrans=BNode()
+#        g.add((broute,sp['translation'],brtrans))
+#        g.add((brtrans,RDF.type,sp['CodedValue']))
+#        g.add((brtrans,sp['codeSystemName'],Literal(rtrans['codeSystemName'])))
+#        g.add((brtrans,sp['code'],Literal(rtrans['code'])))
+#        g.add((brtrans,dcterms['title'],Literal(rtrans['displayName'])))
+        period=med['period']
+        bperiod=BNode()
+        dose=med['dose']
+        bdose=BNode()
+        g.add((medname,sp['quantity'],bdose))
+        g.add((bdose,sp['unit'],Literal(dose['unit'])))
+        g.add((bdose,sp['value'],Literal(dose['value'])))
     return g
 

@@ -103,17 +103,19 @@ if __name__ == '__main__':
 #    listtoc(toc)
 #    g.prefix_mapping("ccd","https:this.ccd.com/patient888999/records/")
     gr=problems.smart_problems(toc)
+    outn3=gr.serialize(format='n3')
+    print outn3;
+    gr=medications.smart_medications(toc)
+    moutn3=gr.serialize(format='n3')
+    print moutn3;
 #    x=yield_smart['problems']
 #    gr=x(toc)
 #    for s,p,o in gr:
 #        print ((s,p,o))
 #    outnt=gr.serialize(format='nt')
 #    print outnt;
-    out=gr.serialize(format='pretty-xml')
+#    out=gr.serialize(format='pretty-xml')
 #    print out;
-    outn3=gr.serialize(format='n3')
-#    print outn3;
-    listtoc(toc);
 #    gg=rdflib.Graph()
 #    gg.parse('gpl2.xml')
 #    outgg=gg.serialize(format='turtle')
