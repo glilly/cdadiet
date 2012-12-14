@@ -4,7 +4,7 @@ cdadiet
 python (and maybe other) tool framework for processing cda xml documents. will yield smart rdf and other formats. 
 
 current output printed from a sample CCD:
-
+<pre>
 @glilly:~/cdadiet$ python cdadiet.py
 @prefix ccd: <http://this.ccd.com/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -94,3 +94,4 @@ ccd:medication-4-data a sp:Medication;
             sp:quantity [ sp:unit "tablet";
                     sp:value "1" ] ];
     sp:startDate "20020505" .
+</pre>
