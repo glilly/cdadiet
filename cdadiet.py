@@ -100,6 +100,7 @@ if __name__ == '__main__':
 #    show(toc,'problem-1')
     problems.derive_problems(toc)
     medications.derive_medications(toc)
+    listtoc(toc)
 #    listtoc(toc)
 #    g.prefix_mapping("ccd","https:this.ccd.com/patient888999/records/")
     gr=problems.smart_problems(toc)
