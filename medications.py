@@ -132,5 +132,11 @@ def smart_medications(toc):
         g.add((medname,sp['quantity'],bdose))
         g.add((bdose,sp['unit'],Literal(dose['unit'])))
         g.add((bdose,sp['value'],Literal(dose['value'])))
+        freq=med['period']
+        bfreq=BNode()
+        g.add((medname,sp['frequency'],bfreq))
+#        g.add((bfreq,RDF.type,sp['CodedValue']))
+        g.add((bfreq,sp['unit'],Literal(freq['unit'])))
+        g.add((bfreq,sp['value'],Literal(freq['value'])))
     return g
 
