@@ -40,21 +40,22 @@ g.bind("ccd","http://this.ccd.com/")
 def tree(node, prefix='|--'):
     txt=('' if (node.text is None) or (len(node.text) == 0) else node.text);
     txt2 = txt.replace('\n','');
-    print prefix+cdautil.clean(node.tag)+'  '+txt2;
+    print (prefix+cdautil.clean(node.tag)+'  '+txt2);
     for att in node.attrib:
-        print prefix+'  : '+cdautil.clean2(att)+'^'+node.attrib[att];
+        print (prefix+'  : '+cdautil.clean2(att)+'^'+node.attrib[att]);
     for child in node:
         tree(child,'|  '+prefix );
 
 def show(toc,what):
-    print what;
+    print(what);
     tree(toc[what])
     return
 
 def listtoc(toc):
-    print "toc";
-    for g in sorted(toc.iterkeys()):
-        print g,toc[g];
+    print ("toc");
+    #for g in sorted(toc.iterkeys()):
+    for g in sorted(toc.keys()):
+        print (g,toc[g]);
     return
 
 # i couldn't get this bit to work... i think we should replace it with classes
@@ -105,10 +106,10 @@ if __name__ == '__main__':
 #    g.prefix_mapping("ccd","https:this.ccd.com/patient888999/records/")
     gr=problems.smart_problems(toc)
     outn3=gr.serialize(format='n3')
-    print outn3;
+    print (outn3);
     gr=medications.smart_medications(toc)
     moutn3=gr.serialize(format='n3')
-    print moutn3;
+    print (moutn3);
 #    x=yield_smart['problems']
 #    gr=x(toc)
 #    for s,p,o in gr:
